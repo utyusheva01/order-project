@@ -1,0 +1,170 @@
+@import "variable";
+
+.modal {
+  width: 933px;
+  margin: 10px auto;
+  padding: 32px 32px 52px 32px;
+  border-radius: $modalRadius;
+  //border: 1px solid red;
+  background: white;
+}
+
+.product-card {
+  display: flex;
+  gap: 32px;
+
+  &_title {
+    font: $headerTitleModal;
+    margin-bottom: 8px;
+  }
+
+  &_price {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    &-value {
+      font: $price;
+      text-transform: uppercase;
+    }
+  }
+}
+
+.product-card_nutrition {
+  display: flex;
+  flex-direction: column;
+
+  &_mini{
+    padding: 0 8px;
+  }
+}
+
+.product-card_image {
+  margin-bottom: 32px;
+}
+
+.product-card_nutrition-label {
+  color: $black;
+  margin-bottom: 12px;
+}
+
+.product-card_nutrition-list {
+  color: $lightgrayColor;
+  display: grid;
+  gap: 12px;
+}
+
+.product-card_nutrition-item {
+  display: flex;
+  justify-content: space-between;
+}
+
+.product-card_sauces {
+  width: 100%;
+
+  &-header {
+    display: flex;
+    justify-content: space-between;
+  }
+
+    &-title {
+      font: $subtitleList;
+      color: $black;
+      margin-bottom: 10px;
+    }
+
+    &-amount {
+      font: $secondary;
+      color: $lightgrayColor;
+    }
+}
+
+
+.product-card_serving {
+  font: $secondary;
+  color: $lightgrayColor;
+  margin-bottom: 24px;
+
+  &_line {
+    margin-bottom: 27px;
+    background-color: $lineDecorationColor;
+  }
+}
+
+
+.product-card_sauce-list {
+  display: grid;
+  gap: 8px;
+  margin-bottom: 66px;
+}
+
+.product-card_sauce-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: $backgroundItemColor;
+  padding: 8px 12px;
+
+  &_sauce-info{
+    display: flex;
+    gap: 8px;
+  }
+
+  &_price {
+    color: $lightgrayColor;
+  }
+}
+
+.modal_sauce-controls {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 4px 8px;
+}
+
+
+input[type="number"] {
+  -moz-appearance: textfield;
+  -webkit-appearance: textfield;
+  appearance: textfield;
+}
+
+input[type="number"]::-webkit-outer-spin-button,
+input[type="number"]::-webkit-inner-spin-button {
+  display: none;
+}
+
+.modal_quantity {
+  width: 32px;
+  background-color: inherit;
+  border: none;
+  text-align: center;
+  font: $quantity;
+}
+
+.modal_control {
+  color: transparent;
+  position: relative;
+  width: 24px;
+  height: 24px;
+  border: none;
+  background-color: inherit;
+  font: $quantity;
+  cursor: pointer;
+}
+
+
+.product-card_add-button {
+  font: $button;
+  border: none;
+  background-color: $orangeColor;
+  border-radius: $buttonRadius;
+  padding: 20px 47px;
+  color:#ffffff;
+}
+
+.disabled {
+  opacity: 0.5; /* Пример стилизации: сделать кнопку полупрозрачной */
+  pointer-events: none; /* Отключаем возможность кликов по кнопке */
+  cursor: not-allowed; /* Изменяем курсор на "не разрешено" */
+}
